@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="repo"
+            type="com.nader.googlerepositoriesandroid.organizationrepositrories.data.model.OrganisationModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/item.organisation.margin.8"
+        android:layout_marginVertical="@dimen/item.organisation.margin.4"
+        android:background="@drawable/bg_rounded_corners_item_org"
+        android:elevation="@dimen/item.organisation.elevation">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view"
+            loadImage="@{repo.ownerModel.avatarUrl}"
+            android:layout_width="@dimen/item.image.width"
+            android:layout_height="@dimen/item.image.height"
+            android:padding="@dimen/item.organisation.padding.20"
+            android:scaleType="centerCrop"
+            android:src="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="@dimen/fillContent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_view"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:paddingStart="@dimen/item.organisation.padding.0"
+                android:paddingEnd="@dimen/item.organisation.padding.8"
+                android:text="@{repo.fullName}"
+                android:textColor="@color/base.text.color"
+                android:textSize="@dimen/text.22"
+                android:textStyle="bold"
+                tools:text="google/truth" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text.18"
+                app:date="@{repo.updatedAt}"
+                tools:text="2023-05-01" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:layout_marginEnd="@dimen/item.organisation.padding.20"
+                android:text="@string/label_more_info"
+                android:textColor="@color/softGreen"
+                app:drawableEndCompat="@drawable/ic_arrow_right" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

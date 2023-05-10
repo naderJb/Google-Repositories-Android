@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rounded_corners"
+    tools:context=".repositorydetails.presentation.ui.fragment.RepositoryDetailFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment.repo.details.margin.16"
+        android:background="@drawable/bg_rounded_pale_pale"
+        android:elevation="@dimen/fragment.repo.details.elevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvatar">
+
+        <TextView
+            android:id="@+id/tvRepoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment.repo.details.margin.16"
+            android:paddingHorizontal="@dimen/fragment.repo.details.padding.8"
+            android:textAlignment="center"
+            android:textColor="@color/base.text.color"
+            android:textSize="@dimen/text.32"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="google/truth" />
+
+        <TextView
+            android:id="@+id/tvRepoDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fragment.repo.details.margin.30"
+            android:textColor="@color/base.text.color"
+            android:textSize="@dimen/text.18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoName"
+            tools:text="Date: 29-03-2023" />
+
+        <TextView
+            android:id="@+id/tvStargazerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:textColor="@color/base.text.color"
+            android:textSize="@dimen/text.18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRepoDate"
+            tools:text="Stargazer Count: 2601" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/tvAvatar"
+        loadImage="@{repo.ownerModel.avatarUrl}"
+        android:layout_width="@dimen/item.image.width"
+        android:layout_height="@dimen/item.image.height"
+        android:padding="@dimen/item.organisation.padding.20"
+        android:scaleType="centerCrop"
+        android:src="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircleImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

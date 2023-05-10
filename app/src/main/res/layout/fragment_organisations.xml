@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base.text.background.color"
+    tools:context=".organizationrepositrories.presentation.ui.fragment.OrganisationsFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:paddingHorizontal="12dp"
+        android:text="@string/organisation.title"
+        android:textColor="@color/base.text.color"
+        android:textSize="@dimen/text.28"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/tvSwitch"
+        android:layout_width="@dimen/fragment.organisation.switch.width"
+        android:layout_height="@dimen/fragment.organisation.switch.height"
+        android:layout_margin="@dimen/fragment.organisation.switch.margin"
+        android:src="@drawable/ic_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fragment.organisation.searchView.height"
+        android:layout_marginTop="@dimen/fragment.organisation.searchView.margin"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:queryHint="Search Repositories" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRepo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fillContent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/svSearch"
+        app:layout_constraintVertical_bias="1.0"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_organisation" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fap"
+        android:layout_width="@dimen/fragment.organisation.fap.width"
+        android:layout_height="@dimen/fragment.organisation.fap.height"
+        android:layout_margin="@dimen/fragment.organisation.fap.margin"
+        android:src="@drawable/ic_arrow_up"
+        android:visibility="invisible"
+        app:fabCustomSize="@dimen/fragment.organisation.fap.width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundedFAB"
+        tools:visibility="visible" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/fragment.organisation.loader.height"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ic_loading" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

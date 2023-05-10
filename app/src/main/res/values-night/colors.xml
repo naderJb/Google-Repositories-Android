@@ -4,15 +4,14 @@
     <color name="white">#FFFFFFFF</color>
 
 
-
     <color name="appleGreen">#0eab6e</color>
     <color name="softGreen">#31b783</color>
     <color name="paleWhite">#f7f9fa</color>
 
 
-    <color name="base.text.color">#000000</color>
-    <color name="base.text.background.color">#FFFFFF</color>
-    <color name="repo.item.bg">#f7f9fa</color>
+    <color name="base.text.color">#f7f9fa</color>
+    <color name="base.text.background.color">#FF000000</color>
+    <color name="repo.item.bg">#1e1c1f</color>
 
-    <color name="repo.base.background">#FFFFFF</color>
+    <color name="repo.base.background">#000000</color>
 </resources>

@@ -1,3 +1,41 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
+
+    <!--  textSize  /-->
+    <dimen name="text.16">16sp</dimen>
+    <dimen name="text.18">18sp</dimen>
+    <dimen name="text.22">22sp</dimen>
+    <dimen name="text.28">28sp</dimen>
+    <dimen name="text.32">32sp</dimen>
+
+    <!--  general  /-->
+    <dimen name="fillContent">0dp</dimen>
+    <dimen name="item.image.width">150dp</dimen>
+    <dimen name="item.image.height">150dp</dimen>
+
+    <!--  item_organisation  /-->
+    <dimen name="item.organisation.margin.8">8dp</dimen>
+    <dimen name="item.organisation.margin.4">4dp</dimen>
+    <dimen name="item.organisation.padding.0">0dp</dimen>
+    <dimen name="item.organisation.padding.8">8dp</dimen>
+    <dimen name="item.organisation.padding.20">20dp</dimen>
+    <dimen name="item.organisation.elevation">8dp</dimen>
+
+
+    <!--  fragment_repository_details  /-->
+    <dimen name="fragment.repo.details.padding.8">8dp</dimen>
+    <dimen name="fragment.repo.details.padding.20">20dp</dimen>
+    <dimen name="fragment.repo.details.margin.16">16dp</dimen>
+    <dimen name="fragment.repo.details.margin.30">30dp</dimen>
+    <dimen name="fragment.repo.details.elevation">8dp</dimen>
+
+    <!--  fragment_organisations  /-->
+    <dimen name="fragment.organisation.searchView.height">50dp</dimen>
+    <dimen name="fragment.organisation.searchView.margin">4dp</dimen>
+    <dimen name="fragment.organisation.fap.margin">25dp</dimen>
+    <dimen name="fragment.organisation.fap.width">50dp</dimen>
+    <dimen name="fragment.organisation.fap.height">50dp</dimen>
+    <dimen name="fragment.organisation.loader.height">150dp</dimen>
+    <dimen name="fragment.organisation.switch.width">50dp</dimen>
+    <dimen name="fragment.organisation.switch.height">50dp</dimen>
+    <dimen name="fragment.organisation.switch.margin">16dp</dimen>
 </resources>
